@@ -58,6 +58,10 @@ for (int i = 0; i < reader.FieldCount; i++)
         "smalldatetime" or "datetime" or "date" => "datetime",
         "time" => "timespan",
         "binary" or "xml" => "dynamic",
+        "float" => "real",
+        "datetimeoffset" => "datetime",
+        "real" => "real",
+        "datetime2" => "datetime",
         _ => "unknown"
     };
 
