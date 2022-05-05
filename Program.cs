@@ -55,13 +55,10 @@ for (int i = 0; i < reader.FieldCount; i++)
         "bigint" => "long",
         "decimal" or "money" => "decimal",
         "varchar" or "nvarchar" or "nchar" or "char" or "uniqueidentifier" => "string",
-        "smalldatetime" or "datetime" or "date" => "datetime",
+        "smalldatetime" or "datetime" or "date" or "datetimeoffset" or "datetime2" => "datetime",
         "time" => "timespan",
         "binary" or "xml" => "dynamic",
-        "float" => "real",
-        "datetimeoffset" => "datetime",
-        "real" => "real",
-        "datetime2" => "datetime",
+        "float" or "real" => "real",
         _ => "unknown"
     };
 
